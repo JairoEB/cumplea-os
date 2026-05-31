@@ -1,0 +1,132 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #fcedeb; 
+}
+
+.pantalla {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.contenedor-invitacion {
+    position: relative; 
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pantalla-1 {
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: #fcedeb; 
+    z-index: 10;
+}
+
+#imagen-fondo-sobre {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+#caja-sobre {
+    top: 45%; 
+    
+    width: 75%; 
+    
+    display: flex;
+    justify-content: center;
+}
+
+#sobre {
+    width: 100%;
+    cursor: pointer;
+    animation: meneito 2s infinite ease-in-out;
+    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.3));
+}
+
+@keyframes meneito {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#pantalla-2 {
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: #fcedeb;
+    z-index: 5;
+}
+
+#imagen-larga {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+#cuenta-regresiva {
+    top: 59.8%; 
+    width: 52%; 
+    background-color: #fcf1ef; 
+    border-radius: 15px; 
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08); 
+}
+
+.tiempo {
+    text-align: center;
+    color: #4a1f11; 
+}
+
+.tiempo span {
+    font-size: 1.3rem; 
+    font-weight: 900; 
+    display: block;
+}
+
+.tiempo p {
+    font-size: 0.55rem;
+    margin: 2px 0 0 0;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#btn-ubicacion {
+    top: 71.5%; 
+    width: 50%; 
+    height: 3.5%; 
+    
+}
+
+#btn-confirmar {
+    top: 89%; 
+    width: 50%; 
+    height: 3%; 
+    
+}
